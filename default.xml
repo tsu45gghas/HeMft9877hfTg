@@ -4,20 +4,25 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
   <remote  name="x86"
+           fetch="git://gitscm.sf.net/gitroot/android-x86/" />
+  <remote  name="helium"
            fetch="." />
   <default revision="refs/tags/android-5.1.1_r24"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
-  <!-- from x86 port repositories -->
-  <project path="build" name="platform/build" groups="pdk,tradefed" remote="x86" revision="lollipop-x86" >
+  <project path="bootable/newinstaller" name="HeNIllfoaafn" remote="helium" revision="helium_lollipop" />
+  <project path="build" name="HeBDiizzfkoo" remote="helium" revision="helium_lollipop" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="frameworks/base" name="HeFBditlzh55gf" remote="helium" revision="helium_lollipop" />
+  <project path="frameworks/native" name="HeFNqi87kskjhbgSf" remote="helium" revision="helium_lollipop" />
+
+  <!-- from x86 port repositories -->
   <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.0" />
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="lollipop-x86" />
-  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="lollipop-x86" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="lollipop-x86" />
@@ -44,8 +49,6 @@
   <project path="external/v86d" name="platform/external/v86d" remote="x86" revision="lollipop-x86" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" remote="x86" revision="lollipop-x86" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" remote="x86" revision="lollipop-x86" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" remote="x86" revision="lollipop-x86" />
   <project path="hardware/drm_gralloc" name="platform/hardware/drm_gralloc" remote="x86" revision="lollipop-x86" />
   <project path="hardware/gps" name="platform/hardware/gps" remote="x86" revision="lollipop-x86" />
   <project path="hardware/intel/hwcomposer" name="platform/hardware/intel/hwcomposer" remote="x86" revision="lollipop-x86" />
